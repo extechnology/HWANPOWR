@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import HeroCarousel from "@/components/HeroCarousel";
 import WhyChokoLa from "@/components/WhyChokoLa";
 import BestSellers from "@/components/BestSellers";
-import DesignerCakes from "@/components/DesignerCakes";
+import SolarLights from "@/components/SolarLights";
 import OfferingsSection from "@/components/OfferingsSection";
 import GiftsSection from "@/components/GiftsSection";
 import CorporateBanner from "@/components/CorporateBanner";
@@ -19,8 +19,8 @@ const Index = () => {
       <main>
         <HeroCarousel />
         <WhyChokoLa />
-        <BestSellers />
-        <DesignerCakes />
+        {/* <BestSellers /> */}
+        <SolarLights />
         <OfferingsSection />
         <GiftsSection />
         <CorporateBanner />

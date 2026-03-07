@@ -16,15 +16,25 @@ const WhyChokoLa = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <p className="section-subtitle mb-3">WHY CHOKO LA?</p>
+            <p className="section-subtitle mb-3">WHY HWAMPOWER?</p>
             <h2 className="section-title mb-6">
-              WE EVOKE EMOTIONS THROUGH THE ART OF CHOCOLATE MAKING
+              Turn sunlight into powerful lighting. ensures brightness all night
+              long
             </h2>
             <p className="text-muted-foreground leading-relaxed text-base md:text-lg mb-8 font-body">
-              Our handcrafted artisanal chocolates are made with 100% couverture chocolate 
-              otherwise known as Real Chocolate (made from cocoa butter) for a rich, indulgent taste. 
-              Our products are ethically produced and free from palm oil. We use only the finest 
-              ingredients, so you can enjoy pure indulgence with every Choko La product.
+              Hwanpower is a trusted manufacturer and distributor of advanced
+              solar street lighting solutions, committed to delivering reliable
+              and energy-efficient lighting systems. The company offers a wide
+              range of solar panel-mounted street lights with power capacities
+              ranging from 90W to 400W, designed to meet diverse outdoor
+              lighting needs. Hwanpower products are engineered with
+              high-performance solar panels, ensuring fast charging capability
+              and long power backup for uninterrupted illumination. With a
+              strong focus on quality, durability, and sustainable technology,
+              Hwanpower aims to support modern infrastructure with eco-friendly
+              lighting solutions. Its innovative products are ideal for streets,
+              highways, residential areas, commercial spaces, and public
+              infrastructure projects.
             </p>
             <a href="#" className="btn-primary-brand inline-block rounded-lg">
               Learn More
@@ -40,7 +50,7 @@ const WhyChokoLa = () => {
           >
             <div className="relative">
               <img
-                src="/images/chocolate-truffle.png"
+                src="/images/solarPanel.png"
                 alt="Handcrafted chocolate truffle"
                 className="w-full max-w-md animate-float"
                 loading="lazy"
@@ -54,7 +64,12 @@ const WhyChokoLa = () => {
 
       {/* Divider graphic */}
       <div className="mt-16 flex justify-center">
-        <img src="/images/graphic-divider.png" alt="" className="h-10 md:h-14 opacity-60" loading="lazy" />
+        <img
+          src="/images/graphic-divider.png"
+          alt=""
+          className="h-10 md:h-14 opacity-60"
+          loading="lazy"
+        />
       </div>
     </section>
   );

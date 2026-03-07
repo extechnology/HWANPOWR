@@ -3,12 +3,10 @@ import { Search, User, ShoppingBag, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navItems = [
-  "CHOCOLATES",
-  "GIFTS & BOXES",
-  "DESIGNER CAKES",
-  "CAKES & PASTRY",
-  "BAKERY",
-  "CORPORATE",
+  "HOME",
+  "ABOUT US",
+  "PRODUCTS",
+  "CONTACTS",
 ];
 
 const Header = () => {
@@ -44,7 +42,7 @@ const Header = () => {
             {/* Logo */}
             <a href="/" className="flex-shrink-0">
               <h1 className="text-2xl md:text-3xl font-bold font-display text-foreground tracking-tight">
-                CHOKO <span className="text-primary">LA</span>
+                HWAN <span className="text-primary">POWER</span>
               </h1>
             </a>
 
