@@ -39,7 +39,7 @@ const ProductCard = ({
 
         {/* Floating Badge (Price) */}
         <div className="absolute top-4 right-4 z-10">
-          <span className="px-3 py-1 text-sm font-bold bg-white/90 backdrop-blur-md rounded-full shadow-sm text-slate-900">
+          <span className="px-3 py-1 text-sm font-bold bg-white/90 backdrop-blur-md rounded-full shadow-sm text-yellow-600">
             {price}
           </span>
         </div>
@@ -121,7 +121,7 @@ const ProductCard = ({
           </button>
 
           <div
-            className="h-2 w-2 rounded-full bg-green-500 animate-pulse"
+            className="h-2 w-2 rounded-full bg-yellow-500 animate-pulse"
             title="In Stock"
           />
         </motion.div>

@@ -61,7 +61,7 @@ const Footer = () => {
                 <a
                   key={i}
                   href="#"
-                  className="w-9 h-9 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary transition-colors"
+                  className="w-9 h-9 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-gradient-to-br from-yellow-300 to-yellow-600 transition-colors"
                 >
                   <Icon className="w-4 h-4" />
                 </a>
@@ -79,7 +79,7 @@ const Footer = () => {
                   <HashLink
                     smooth
                     to={link.to}
-                    className="text-xs text-primary-foreground/50 hover:text-primary transition-colors font-body"
+                    className="text-xs text-primary-foreground/50 hover:text-yellow-500 transition-colors font-body"
                   >
                     {link.name}
                   </HashLink>
@@ -103,7 +103,7 @@ const Footer = () => {
                 <li key={link}>
                   <a
                     href="#"
-                    className="text-xs text-primary-foreground/50 hover:text-primary transition-colors font-body"
+                    className="text-xs text-primary-foreground/50 hover:text-yellow-500 transition-colors font-body"
                   >
                     {link}
                   </a>

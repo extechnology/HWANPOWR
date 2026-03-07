@@ -24,7 +24,7 @@ const Header = () => {
     <>
       {/* Announcement Bar */}
       <div className="announcement-bar bg-yellow-500">
-        Free delivery for orders above ₹399 (Delhi/NCR) and ₹2,499 (outside Delhi/NCR).
+        Free delivery for orders above ₹5100.
       </div>
 
       {/* Navigation */}
@@ -56,15 +56,15 @@ const Header = () => {
 
             {/* Right Icons */}
             <div className="flex items-center gap-3 md:gap-4">
-              <button className="p-2 text-foreground hover:text-primary transition-colors" aria-label="Search">
+              <button className="p-2 text-yellow-600 hover:text-yellow-500 transition-colors" aria-label="Search">
                 <Search className="w-5 h-5" />
               </button>
-              <button className="hidden md:block p-2 text-foreground hover:text-primary transition-colors" aria-label="Account">
+              <button className="hidden md:block p-2 text-yellow-600 hover:text-yellow-500 transition-colors" aria-label="Account">
                 <User className="w-5 h-5" />
               </button>
-              <button className="p-2 text-foreground hover:text-primary transition-colors relative" aria-label="Cart">
+              <button className="p-2 text-yellow-600 hover:text-yellow-500 transition-colors relative" aria-label="Cart">
                 <ShoppingBag className="w-5 h-5" />
-                <span className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-primary text-primary-foreground text-[10px] font-bold rounded-full flex items-center justify-center">
+                <span className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-yellow-500 text-primary-foreground text-[10px] font-bold rounded-full flex items-center justify-center">
                   0
                 </span>
               </button>
