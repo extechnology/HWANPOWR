@@ -7,7 +7,7 @@ const WhyChokoLa = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="py-16 md:py-24 bg-background overflow-hidden">
+    <section id="about" ref={ref} className="py-12 md:py-15 bg-background overflow-hidden">
       <div className="container mx-auto px-4 md:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Text Content */}
@@ -16,12 +16,12 @@ const WhyChokoLa = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <p className="section-subtitle mb-3">WHY HWAMPOWER?</p>
-            <h2 className="section-title mb-6">
+            <p className="section-subtitle text-transparent bg-clip-text bg-gradient-to-br from-yellow-500 to-yellow-700 mb-3">About Us</p>
+            <h2 className="md:text-4xl text-3xl font-medium mb-6">
               Turn sunlight into powerful lighting. ensures brightness all night
               long
             </h2>
-            <p className="text-muted-foreground leading-relaxed text-base md:text-lg mb-8 font-body">
+            <p className="text-muted-foreground leading-relaxed text-base md:text-md mb-8 font-body">
               Hwanpower is a trusted manufacturer and distributor of advanced
               solar street lighting solutions, committed to delivering reliable
               and energy-efficient lighting systems. The company offers a wide
@@ -36,7 +36,7 @@ const WhyChokoLa = () => {
               highways, residential areas, commercial spaces, and public
               infrastructure projects.
             </p>
-            <a href="#" className="btn-primary-brand inline-block rounded-lg">
+            <a href="#" className="btn-primary-brand bg-gradient-to-br from-yellow-400 to-yellow-700 inline-block rounded-lg">
               Learn More
             </a>
           </motion.div>
@@ -63,7 +63,7 @@ const WhyChokoLa = () => {
       </div>
 
       {/* Divider graphic */}
-      <div className="mt-16 flex justify-center">
+      <div className="mt-10 flex justify-center">
         <img
           src="/images/graphic-divider.png"
           alt=""

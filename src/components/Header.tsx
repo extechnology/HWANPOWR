@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import { Search, User, ShoppingBag, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { HashLink } from "react-router-hash-link";
 
 const navItems = [
-  "HOME",
-  "ABOUT US",
-  "PRODUCTS",
-  "CONTACTS",
+  {name:"HOME",link:"#home"},
+  {name:"ABOUT US",link:"#about"},
+  {name:"PRODUCTS",link:"#products"},
+  {name:"CONTACTS",link:"#contact"}
 ];
 
 const Header = () => {
@@ -22,7 +23,7 @@ const Header = () => {
   return (
     <>
       {/* Announcement Bar */}
-      <div className="announcement-bar">
+      <div className="announcement-bar bg-yellow-500">
         Free delivery for orders above ₹399 (Delhi/NCR) and ₹2,499 (outside Delhi/NCR).
       </div>
 
@@ -41,17 +42,15 @@ const Header = () => {
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
             <a href="/" className="flex-shrink-0">
-              <h1 className="text-2xl md:text-3xl font-bold font-display text-foreground tracking-tight">
-                HWAN <span className="text-primary">POWER</span>
-              </h1>
+              <img src="/images/hwan_logo.png" alt="" className="w-40 relative" />
             </a>
 
             {/* Desktop Nav */}
             <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
               {navItems.map((item) => (
-                <a key={item} href="#" className="nav-link text-foreground hover:text-primary text-xs xl:text-sm">
-                  {item}
-                </a>
+                <HashLink key={item.name} smooth to={item.link} className="nav-link text-yellow-600 hover:text-primary text-xs xl:text-sm">
+                  {item.name}
+                </HashLink>
               ))}
             </nav>
 
@@ -109,14 +108,13 @@ const Header = () => {
                 <nav className="flex flex-col gap-1">
                   {navItems.map((item, i) => (
                     <motion.a
-                      key={item}
-                      href="#"
+                      key={item.name}
                       className="py-3 px-4 text-sm uppercase tracking-wider font-semibold text-foreground hover:text-primary hover:bg-secondary rounded-lg transition-colors font-body"
                       initial={{ opacity: 0, x: 20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: i * 0.05 }}
                     >
-                      {item}
+                      {item.name}
                     </motion.a>
                   ))}
                 </nav>

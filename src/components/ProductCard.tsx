@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
 interface ProductCardProps {
@@ -17,66 +17,115 @@ const ProductCard = ({
   index = 0,
 }: ProductCardProps) => {
   const [expanded, setExpanded] = useState(false);
-
   const specEntries = Object.entries(specs);
-  const visibleSpecs = expanded ? specEntries : specEntries.slice(0, 4);
 
   return (
     <motion.div
-      className="product-card-hover group cursor-pointer flex-shrink-0 w-full"
-      initial={{ opacity: 0, y: 30 }}
+      layout // Essential for smooth height/position changes
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.4, delay: index * 0.05 }}
+      className="group relative flex flex-col rounded-3xl bg-white border border-slate-200 shadow-sm hover:shadow-2xl hover:border-blue-100 transition-all duration-500 overflow-hidden"
     >
-      {/* IMAGE */}
-      <div className="relative overflow-hidden rounded-xl bg-secondary aspect-square mb-4">
-        <img
+      {/* IMAGE CONTAINER */}
+      <div className="relative aspect-square overflow-hidden bg-slate-100">
+        <motion.img
+          layout
           src={image}
           alt={name}
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-          loading="lazy"
         />
 
-        <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/10 transition-colors duration-300" />
+        {/* Floating Badge (Price) */}
+        <div className="absolute top-4 right-4 z-10">
+          <span className="px-3 py-1 text-sm font-bold bg-white/90 backdrop-blur-md rounded-full shadow-sm text-slate-900">
+            {price}
+          </span>
+        </div>
 
-        <button className="absolute bottom-4 left-1/2 -translate-x-1/2 btn-primary-brand rounded-lg text-xs opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-4 group-hover:translate-y-0 whitespace-nowrap">
-          Order Now
-        </button>
+        {/* Action Overlay */}
+        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-[2px]">
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="bg-white text-black px-6 py-2.5 rounded-full font-bold text-sm shadow-xl"
+          >
+            Quick Order
+          </motion.button>
+        </div>
       </div>
 
-      {/* TITLE */}
-      <h3 className="font-display font-semibold text-foreground text-sm md:text-base leading-tight mb-2 line-clamp-2">
-        {name}
-      </h3>
+      {/* TEXT CONTENT */}
+      <div className="p-6 flex flex-col flex-grow">
+        <motion.h3
+          layout="position"
+          className="text-xl font-bold text-slate-900 leading-tight"
+        >
+          {name}
+        </motion.h3>
 
-      {/* SPECS */}
-      {specEntries.length > 0 && (
-        <div className="text-xs md:text-sm text-muted-foreground space-y-1 mb-2">
-          {visibleSpecs.map(([key, value]) => (
-            <p key={key}>
-              <span className="font-medium capitalize">
-                {key.replace(/([A-Z])/g, " $1")}:
-              </span>{" "}
-              {value}
-            </p>
+        {/* SPECIFICATIONS GRID */}
+        <div className="mt-4 space-y-2">
+          {specEntries.slice(0, 3).map(([key, value]) => (
+            <div
+              key={key}
+              className="flex justify-between text-xs border-b border-slate-50 pb-1"
+            >
+              <span className="text-slate-400 uppercase tracking-wider font-medium">
+                {key.replace(/([A-Z])/g, " $1")}
+              </span>
+              <span className="text-slate-700 font-semibold">{value}</span>
+            </div>
           ))}
 
-          {specEntries.length > 4 && (
-            <button
-              onClick={() => setExpanded(!expanded)}
-              className="text-primary font-medium text-xs mt-1"
-            >
-              {expanded ? "Show less" : "More details"}
-            </button>
-          )}
+          {/* Hidden specs that reveal on expand */}
+          <AnimatePresence>
+            {expanded && (
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: "auto" }}
+                exit={{ opacity: 0, height: 0 }}
+                className="overflow-hidden space-y-2 pt-2"
+              >
+                {specEntries.slice(3).map(([key, value]) => (
+                  <motion.div
+                    initial={{ x: -10, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    key={key}
+                    className="flex justify-between text-xs border-b border-slate-50 pb-1"
+                  >
+                    <span className="text-slate-400 uppercase tracking-wider font-medium">
+                      {key.replace(/([A-Z])/g, " $1")}
+                    </span>
+                    <span className="text-slate-700 font-semibold">
+                      {value}
+                    </span>
+                  </motion.div>
+                ))}
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
-      )}
 
-      {/* PRICE */}
-      <p className="text-primary font-bold font-body text-sm md:text-base">
-        {price}
-      </p>
+        {/* FOOTER ACTION */}
+        <motion.div
+          layout
+          className="mt-auto pt-6 flex items-center justify-between"
+        >
+          <button
+            onClick={() => setExpanded(!expanded)}
+            className="flex items-center gap-1.5 text-[11px] uppercase tracking-widest font-black text-yellow-600 hover:text-yellow-700 transition-colors"
+          >
+            {expanded ? "Less Info —" : "Full Specs +"}
+          </button>
+
+          <div
+            className="h-2 w-2 rounded-full bg-green-500 animate-pulse"
+            title="In Stock"
+          />
+        </motion.div>
+      </div>
     </motion.div>
   );
 };

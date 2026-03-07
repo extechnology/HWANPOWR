@@ -3,10 +3,9 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const slides = [
-  { image: "/images/hero-banner-1.jpg", alt: "Celebrating Women with a Sweet Surprise" },
-  { image: "/images/hero-banner-2.jpg", alt: "Signature Cakes Collection" },
-  { image: "/images/hero-banner-3.jpg", alt: "Designer Cakes" },
-  { image: "/images/hero-banner-4.jpg", alt: "Celebrating 20 Years of Choko La" },
+  { image: "/images/hero.png", alt: "solar lights" },
+  { image: "/images/hero2.png", alt: "solar lights" },
+  { image: "/images/hero3.png", alt: "solar lights" },
 ];
 
 const HeroCarousel = () => {
@@ -49,7 +48,11 @@ const HeroCarousel = () => {
   };
 
   return (
-    <section className="relative w-full overflow-hidden" style={{ aspectRatio: "16/7" }}>
+    <section
+      id="home"
+      className="relative w-full overflow-hidden"
+      style={{ aspectRatio: "16/7" }}
+    >
       <AnimatePresence initial={false} custom={direction} mode="popLayout">
         <motion.img
           key={current}
@@ -69,14 +72,14 @@ const HeroCarousel = () => {
       {/* Navigation Arrows */}
       <button
         onClick={prev}
-        className="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 z-10 w-10 h-10 md:w-12 md:h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-lg"
+        className="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 z-10 w-10 h-10 md:w-12 md:h-12 bg-gradient-to-r from-yellow-300 to-yellow-600 text-primary-foreground rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-lg"
         aria-label="Previous slide"
       >
         <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
       </button>
       <button
         onClick={next}
-        className="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 z-10 w-10 h-10 md:w-12 md:h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-lg"
+        className="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 z-10 w-10 h-10 md:w-12 md:h-12 bg-gradient-to-r from-yellow-300 to-yellow-600 text-primary-foreground rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-lg"
         aria-label="Next slide"
       >
         <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
@@ -88,7 +91,7 @@ const HeroCarousel = () => {
           <button
             key={i}
             onClick={() => goTo(i)}
-            className={`hero-dot ${i === current ? "hero-dot-active" : "hero-dot-inactive"}`}
+            className={`hero-dot bg-yellow-500 ${i === current ? "hero-dot-active" : "hero-dot-inactive"}`}
             aria-label={`Go to slide ${i + 1}`}
           />
         ))}

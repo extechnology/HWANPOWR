@@ -19,15 +19,11 @@ const Index = () => {
       <main>
         <HeroCarousel />
         <WhyChokoLa />
-        {/* <BestSellers /> */}
         <SolarLights />
         <OfferingsSection />
-        <GiftsSection />
-        <CorporateBanner />
-        <WorldOfChokoLa />
+        <FeaturesBar />
         <Testimonials />
         <StoreLocations />
-        <FeaturesBar />
       </main>
       <Footer />
     </div>

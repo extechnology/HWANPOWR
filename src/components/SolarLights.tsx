@@ -6,7 +6,7 @@ const solarLights = [
   {
     image: "/images/solarLight1.jpg",
     name: "90W Solar Street Light",
-    price: "Contact for price",
+    price: "₹ 2000",
     specs: {
       led: "5730 144D",
       battery: "3.2V 10Ah",
@@ -24,7 +24,7 @@ const solarLights = [
   {
     image: "/images/solarLight2.jpg",
     name: "120W Solar Street Light",
-    price: "Contact for price",
+    price: "₹ 2000",
     specs: {
       led: "5730 192D",
       battery: "3.2V 12Ah",
@@ -43,7 +43,7 @@ const solarLights = [
   {
     image: "/images/solarLight3.jpg",
     name: "150W Solar Street Light",
-    price: "Contact for price",
+    price: "₹ 2000",
     specs: {
       led: "5730 240D",
       battery: "3.2V 15Ah",
@@ -62,7 +62,7 @@ const solarLights = [
   {
     image: "/images/solarLight4.jpg",
     name: "300W Solar Street Light",
-    price: "Contact for price",
+    price: "₹ 2000",
     specs: {
       led: "5730 480D",
       battery: "3.2V 15Ah",
@@ -81,7 +81,7 @@ const solarLights = [
   {
     image: "/images/solarLight5.jpg",
     name: "400W Solar Street Light",
-    price: "Contact for price",
+    price: "₹ 2000",
     specs: {
       led: "5730 600D",
       battery: "3.2V 20Ah",
@@ -100,7 +100,7 @@ const solarLights = [
   {
     image: "/images/solarLight6.jpg",
     name: "600W Solar Street Light",
-    price: "Contact for price",
+    price: "₹ 2000",
     specs: {
       led: "5730 600D",
       battery: "3.2V 25Ah",
@@ -119,7 +119,7 @@ const solarLights = [
   {
     image: "/images/solarLight7.jpg",
     name: "300W Solar Street Light (Grey)",
-    price: "Contact for price",
+    price: "₹ 2000",
     specs: {
       bodyColor: "Grey",
       led: "5730 48D",
@@ -139,7 +139,7 @@ const solarLights = [
   {
     image: "/images/solarLight8.jpg",
     name: "400W Solar Street Light (Grey)",
-    price: "Contact for price",
+    price: "₹ 2000",
     specs: {
       bodyColor: "Grey",
       led: "5730 96D",
@@ -161,7 +161,7 @@ const SolarLights = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="py-16 md:py-24 bg-background">
+    <section id="products" ref={ref} className="py-10 md:py-15 bg-background">
       <div className="container mx-auto px-4 md:px-8">
         <motion.div
           className="text-center mb-12"
@@ -169,8 +169,12 @@ const SolarLights = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <p className="section-subtitle mb-3">OUR PRODUCTS</p>
-          <h2 className="section-title">Trending Solar Lights</h2>
+          <p className="section-subtitle text-transparent bg-clip-text bg-gradient-to-br from-yellow-500 to-yellow-700 mb-3">
+            OUR PRODUCTS
+          </p>
+          <h2 className="md:text-4xl text-3xl font-medium">
+            Trending Solar Lights
+          </h2>
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">

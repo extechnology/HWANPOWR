@@ -1,4 +1,20 @@
-import { Instagram, Facebook, Twitter, Youtube, Mail, Phone, MapPin } from "lucide-react";
+import {
+  Instagram,
+  Facebook,
+  Twitter,
+  Youtube,
+  Mail,
+  Phone,
+  MapPin,
+} from "lucide-react";
+import { HashLink } from "react-router-hash-link";
+
+const quickLinks = [
+  { name: "Home", to: "#home" },
+  { name: "About Us", to: "#about" },
+  { name: "Products", to: "#products" },
+  { name: "Contact Us", to: "#contact" },
+];
 
 const Footer = () => {
   return (
@@ -19,7 +35,7 @@ const Footer = () => {
                 placeholder="Your email address"
                 className="flex-1 px-4 py-3 bg-primary-foreground/10 border border-primary-foreground/20 rounded-lg text-sm text-primary-foreground placeholder:text-primary-foreground/40 focus:outline-none focus:border-primary font-body"
               />
-              <button className="btn-primary-brand rounded-lg text-xs px-6">
+              <button className="btn-primary-brand bg-gradient-to-br from-yellow-300 to-yellow-600 rounded-lg text-xs px-6">
                 Subscribe
               </button>
             </div>
@@ -31,12 +47,15 @@ const Footer = () => {
       <div className="container mx-auto px-4 md:px-8 py-10 md:py-14">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           <div>
-            <h4 className="font-display font-bold text-primary-foreground text-lg mb-4">
-              CHOKO <span className="text-primary">LA</span>
+            <h4 className="font-body font-bold text-primary-foreground text-sm uppercase tracking-wider mb-4">
+              Address
             </h4>
-            <p className="text-xs text-primary-foreground/50 font-body leading-relaxed mb-4">
-              Handcrafted artisanal chocolates made with 100% couverture chocolate for a rich, indulgent taste.
-            </p>
+            <ul className="text-xs text-primary-foreground/50 pb-5 space-y-2">
+              <li>Hwan Power,</li>
+              <li>KINFRA Advanced Technology Park,</li>
+              <li>Ramanattukara, </li>
+              <li>9207889911</li>
+            </ul>
             <div className="flex gap-3">
               {[Instagram, Facebook, Twitter, Youtube].map((Icon, i) => (
                 <a
@@ -55,11 +74,15 @@ const Footer = () => {
               Quick Links
             </h4>
             <ul className="space-y-2">
-              {["About Us", "Chocolates", "Designer Cakes", "Corporate Gifting", "Contact Us"].map((link) => (
-                <li key={link}>
-                  <a href="#" className="text-xs text-primary-foreground/50 hover:text-primary transition-colors font-body">
-                    {link}
-                  </a>
+              {quickLinks.map((link) => (
+                <li key={link.name}>
+                  <HashLink
+                    smooth
+                    to={link.to}
+                    className="text-xs text-primary-foreground/50 hover:text-primary transition-colors font-body"
+                  >
+                    {link.name}
+                  </HashLink>
                 </li>
               ))}
             </ul>
@@ -70,9 +93,18 @@ const Footer = () => {
               Customer Care
             </h4>
             <ul className="space-y-2">
-              {["Shipping Policy", "Return Policy", "Privacy Policy", "Terms of Service", "FAQ"].map((link) => (
+              {[
+                "Shipping Policy",
+                "Return Policy",
+                "Privacy Policy",
+                "Terms of Service",
+                "FAQ",
+              ].map((link) => (
                 <li key={link}>
-                  <a href="#" className="text-xs text-primary-foreground/50 hover:text-primary transition-colors font-body">
+                  <a
+                    href="#"
+                    className="text-xs text-primary-foreground/50 hover:text-primary transition-colors font-body"
+                  >
                     {link}
                   </a>
                 </li>
@@ -80,7 +112,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div>
+          {/* <div>
             <h4 className="font-body font-bold text-primary-foreground text-sm uppercase tracking-wider mb-4">
               Contact
             </h4>
@@ -98,7 +130,7 @@ const Footer = () => {
                 hello@chokola.in
               </li>
             </ul>
-          </div>
+          </div> */}
         </div>
       </div>
 
@@ -106,7 +138,7 @@ const Footer = () => {
       <div className="border-t border-primary-foreground/10">
         <div className="container mx-auto px-4 md:px-8 py-5">
           <p className="text-center text-xs text-primary-foreground/30 font-body">
-            © 2026 Choko La. All rights reserved.
+            © 2026 HWANPOWER. All rights reserved.
           </p>
         </div>
       </div>
