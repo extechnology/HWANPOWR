@@ -44,7 +44,7 @@ const Testimonials = () => {
   const prev = () => setCurrent((p) => (p - 1 + testimonials.length) % testimonials.length);
 
   return (
-    <section ref={ref} className="py-16 md:py-24 bg-brand-cream">
+    <section ref={ref} className="py-12 md:py-20 bg-brand-cream">
       <div className="container mx-auto px-4 md:px-8">
         <motion.div
           className="text-center mb-12"

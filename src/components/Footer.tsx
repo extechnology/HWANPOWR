@@ -1,19 +1,22 @@
-import {
-  Instagram,
-  Facebook,
-  Twitter,
-  Youtube,
-  Mail,
-  Phone,
-  MapPin,
-} from "lucide-react";
+import { Instagram, Facebook, Youtube, Linkedin } from "lucide-react";
+import { SiPinterest, SiX } from "react-icons/si";
 import { HashLink } from "react-router-hash-link";
+import { Building, MapPin, Phone } from "lucide-react";
 
 const quickLinks = [
   { name: "Home", to: "#home" },
   { name: "About Us", to: "#about" },
   { name: "Products", to: "#products" },
   { name: "Contact Us", to: "#contact" },
+];
+
+const Icons = [
+  { link: "https://www.instagram.com/hwanpower/", icon: Instagram },
+  { link: "https://www.facebook.com/hwanpower", icon: Facebook },
+  { link: "https://x.com/hwan_power", icon: SiX },
+  { link: "https://www.youtube.com/@HwanPower", icon: Youtube },
+  { link: "https://in.pinterest.com/hwanpowerr/", icon: SiPinterest },
+  { link: "https://www.linkedin.com/company/hwan-power", icon: Linkedin },
 ];
 
 const Footer = () => {
@@ -51,16 +54,33 @@ const Footer = () => {
               Address
             </h4>
             <ul className="text-xs text-primary-foreground/50 pb-5 space-y-2">
-              <li>Hwan Power,</li>
-              <li>KINFRA Advanced Technology Park,</li>
-              <li>Ramanattukara, </li>
-              <li>9207889911</li>
+              <li className="flex items-center gap-2">
+                <Building className="w-3.5 h-3.5 text-gray-500" />
+                Hwan Power
+              </li>
+
+              <li className="flex items-center gap-2">
+                <MapPin className="w-3.5 h-3.5 text-gray-500" />
+                KINFRA Advanced Technology Park
+              </li>
+
+              <li className="flex items-center gap-2">
+                <MapPin className="w-3.5 h-3.5 text-gray-500" />
+                Ramanattukara
+              </li>
+
+              <li className="flex items-center gap-2">
+                <Phone className="w-3.5 h-3.5 text-gray-500" />
+                9207889911
+              </li>
             </ul>
             <div className="flex gap-3">
-              {[Instagram, Facebook, Twitter, Youtube].map((Icon, i) => (
+              {Icons.map(({ icon: Icon, link }, i) => (
                 <a
                   key={i}
-                  href="#"
+                  href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-9 h-9 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-gradient-to-br from-yellow-300 to-yellow-600 transition-colors"
                 >
                   <Icon className="w-4 h-4" />

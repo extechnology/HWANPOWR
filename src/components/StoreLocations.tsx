@@ -25,34 +25,15 @@ const StoreLocations = () => {
           transition={{ duration: 0.8 }}
         >
           <div className="container mx-auto px-4 md:px-8">
-            <div className="max-w-lg">
-              <h2 className="text-2xl md:text-4xl font-display font-bold text-primary-foreground mb-6">
+            <div className="relative max-w-7xl mx-auto flex justify-between">
+              <h2 className="text-2xl content-center md:text-4xl font-display font-bold text-primary-foreground mb-6">
                 Contact Us
               </h2>
 
-              <div className="space-y-4 mb-6">
-                <div>
-                  {/* <h3 className="text-primary-foreground font-body font-bold mb-2">
-                    Delhi
-                  </h3>
-                  <div className="flex flex-wrap gap-3">
-                    {[
-                      "Khan Market",
-                      "DLF Promenade",
-                      "Select Citywalk Mall",
-                    ].map((store) => (
-                      <a
-                        key={store}
-                        href="#"
-                        className="flex items-center gap-1.5 text-primary-foreground/80 hover:text-primary transition-colors text-sm font-body"
-                      >
-                        <MapPin className="w-3.5 h-3.5" />
-                        {store}
-                      </a>
-                    ))}
-                  </div> */}
-                </div>
-                <div>
+              <div className="w-px bg-white/30 h-24 self-center" />
+
+              <div className="space-y-4  content-center">
+                <div className="space-y-2">
                   <h3 className="text-primary-foreground font-body font-bold mb-2">
                     Kerala
                   </h3>
@@ -80,12 +61,16 @@ const StoreLocations = () => {
                 </div>
               </div>
 
-              <a
-                href="#"
-                className="btn-primary-brand bg-gradient-to-br from-yellow-300 to-yellow-600 inline-block rounded-lg text-xs"
-              >
-                Find a store near you
-              </a>
+              <div className="w-px bg-white/30 h-24 self-center" />
+
+              <div className="content-center">
+                <a
+                  href="#"
+                  className="btn-primary-brand bg-gradient-to-br from-yellow-300 to-yellow-600 inline-block rounded-lg text-xs"
+                >
+                  Find a store near you
+                </a>
+              </div>
             </div>
           </div>
         </motion.div>
