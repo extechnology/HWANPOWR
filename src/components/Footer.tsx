@@ -23,7 +23,7 @@ const Footer = () => {
   return (
     <footer className="bg-brand-dark text-primary-foreground/80">
       {/* Newsletter */}
-      <div className="border-b border-primary-foreground/10">
+      {/* <div className="border-b border-primary-foreground/10">
         <div className="container mx-auto px-4 md:px-8 py-10 md:py-14">
           <div className="max-w-xl mx-auto text-center">
             <h3 className="text-xl md:text-2xl font-display font-bold text-primary-foreground mb-2">
@@ -44,7 +44,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Main Footer */}
       <div className="container mx-auto px-4 md:px-8 py-10 md:py-14">
@@ -132,25 +132,14 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* <div>
-            <h4 className="font-body font-bold text-primary-foreground text-sm uppercase tracking-wider mb-4">
-              Contact
-            </h4>
-            <ul className="space-y-3">
-              <li className="flex items-start gap-2 text-xs text-primary-foreground/50 font-body">
-                <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" />
-                Khan Market, New Delhi
-              </li>
-              <li className="flex items-center gap-2 text-xs text-primary-foreground/50 font-body">
-                <Phone className="w-4 h-4 flex-shrink-0" />
-                +91 99104 57772
-              </li>
-              <li className="flex items-center gap-2 text-xs text-primary-foreground/50 font-body">
-                <Mail className="w-4 h-4 flex-shrink-0" />
-                hello@chokola.in
-              </li>
-            </ul>
-          </div> */}
+          <div className="w-full h-48 rounded-lg overflow-hidden border border-yellow-500/20">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3786.6839503887836!2d75.854642!3d11.180532999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTHCsDEwJzQ5LjkiTiA3NcKwNTEnMTYuNyJF!5e1!3m2!1sen!2sin!4v1773163812365!5m2!1sen!2sin"
+              width="600"
+              height="450"
+              loading="lazy"
+            ></iframe>
+          </div>
         </div>
       </div>
 

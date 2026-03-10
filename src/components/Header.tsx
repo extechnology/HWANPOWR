@@ -4,15 +4,18 @@ import { motion, AnimatePresence } from "framer-motion";
 import { HashLink } from "react-router-hash-link";
 
 const navItems = [
-  {name:"HOME",link:"#home"},
-  {name:"ABOUT US",link:"#about"},
-  {name:"PRODUCTS",link:"#products"},
-  {name:"CONTACTS",link:"#contact"}
+  { name: "HOME", link: "#home" },
+  { name: "ABOUT US", link: "#about" },
+  { name: "PRODUCTS", link: "#products" },
+  { name: "CONTACTS", link: "#contact" },
 ];
+
+const sections = ["home", "about", "products", "contact"];
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -20,12 +23,34 @@ const Header = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      {
+        threshold: 0.6,
+      },
+    );
+
+    sections.forEach((section) => {
+      const el = document.getElementById(section);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <>
       {/* Announcement Bar */}
-      <div className="announcement-bar bg-yellow-500">
+      {/* <div className="announcement-bar bg-yellow-500">
         Free delivery for orders above ₹5100.
-      </div>
+      </div> */}
 
       {/* Navigation */}
       <motion.header
@@ -42,40 +67,32 @@ const Header = () => {
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
             <a href="/" className="flex-shrink-0">
-              <img src="/images/hwan_logo.png" alt="" className="w-40 relative" />
+              <img
+                src="/images/hwan_logo.png"
+                alt=""
+                className="w-40 relative"
+              />
             </a>
 
             {/* Desktop Nav */}
             <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
               {navItems.map((item) => (
-                <HashLink key={item.name} smooth to={item.link} className="nav-link text-yellow-600 hover:text-primary text-xs xl:text-sm">
+                <HashLink
+                  key={item.name}
+                  smooth
+                  to={item.link}
+                  className={`nav-link text-xs xl:text-sm transition-colors ${
+                    activeSection === item.link.replace("#", "")
+                      ? "text-yellow-400 font-semibold border-b-2 border-yellow-400"
+                      : "text-yellow-600 hover:text-yellow-400"
+                  }`}
+                >
                   {item.name}
                 </HashLink>
               ))}
             </nav>
 
-            {/* Right Icons */}
-            <div className="flex items-center gap-3 md:gap-4">
-              <button className="p-2 text-yellow-600 hover:text-yellow-500 transition-colors" aria-label="Search">
-                <Search className="w-5 h-5" />
-              </button>
-              <button className="hidden md:block p-2 text-yellow-600 hover:text-yellow-500 transition-colors" aria-label="Account">
-                <User className="w-5 h-5" />
-              </button>
-              <button className="p-2 text-yellow-600 hover:text-yellow-500 transition-colors relative" aria-label="Cart">
-                <ShoppingBag className="w-5 h-5" />
-                <span className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-yellow-500 text-primary-foreground text-[10px] font-bold rounded-full flex items-center justify-center">
-                  0
-                </span>
-              </button>
-              <button
-                className="lg:hidden p-2 text-foreground"
-                onClick={() => setMobileOpen(true)}
-                aria-label="Menu"
-              >
-                <Menu className="w-6 h-6" />
-              </button>
-            </div>
+            <div className="flex items-center gap-3 md:gap-4"></div>
           </div>
         </div>
       </motion.header>
@@ -100,8 +117,13 @@ const Header = () => {
             >
               <div className="p-6">
                 <div className="flex justify-between items-center mb-10">
-                  <h2 className="text-xl font-display font-bold text-foreground">Menu</h2>
-                  <button onClick={() => setMobileOpen(false)} className="text-foreground">
+                  <h2 className="text-xl font-display font-bold text-foreground">
+                    Menu
+                  </h2>
+                  <button
+                    onClick={() => setMobileOpen(false)}
+                    className="text-foreground"
+                  >
                     <X className="w-6 h-6" />
                   </button>
                 </div>

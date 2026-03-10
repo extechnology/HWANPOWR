@@ -39,21 +39,21 @@ const StoreLocations = () => {
                   </h3>
                   <a
                     href="#"
-                    className="flex items-center gap-1.5 text-primary-foreground/80 hover:text-primary transition-colors text-sm font-body"
+                    className="flex items-center gap-1.5 text-primary-foreground/80 hover:text-yellow-500 transition-colors text-sm font-body"
                   >
                     <MapPin className="w-3.5 h-3.5" />
                     Kinfra Advanced Technology Park,Ramanatturkara
                   </a>
                   <a
                     href="#"
-                    className="flex items-center gap-1.5 text-primary-foreground/80 hover:text-primary transition-colors text-sm font-body"
+                    className="flex items-center gap-1.5 text-primary-foreground/80 hover:text-yellow-500 transition-colors text-sm font-body"
                   >
                     <Phone className="w-3.5 h-3.5" />
                     9207889911
                   </a>
                   <a
                     href="#"
-                    className="flex items-center gap-1.5 text-primary-foreground/80 hover:text-primary transition-colors text-sm font-body"
+                    className="flex items-center gap-1.5 text-primary-foreground/80 hover:text-yellow-500 transition-colors text-sm font-body"
                   >
                     <Mail className="w-3.5 h-3.5" />
                     hwanpowerr@gmail.com{" "}
