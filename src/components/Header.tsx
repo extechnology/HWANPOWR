@@ -24,25 +24,25 @@ const Header = () => {
   }, []);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
-        });
-      },
-      {
-        threshold: 0.6,
-      },
-    );
+    const timeout = setTimeout(() => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setActiveSection(entry.target.id);
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: "-50px 0px -20% 0px" },
+      );
 
-    sections.forEach((section) => {
-      const el = document.getElementById(section);
-      if (el) observer.observe(el);
-    });
+      sections.forEach((section) => {
+        const el = document.getElementById(section);
+        if (el) observer.observe(el);
+      });
+    }, 200); // wait for page to render
 
-    return () => observer.disconnect();
+    return () => clearTimeout(timeout);
   }, []);
 
   return (

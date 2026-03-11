@@ -1,13 +1,18 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import WhatsAppButton from "./ui/whatsappButton";
 
 const WhyChokoLa = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="about" ref={ref} className="py-12 md:py-15 bg-background overflow-hidden">
+    <section
+      id="about"
+      ref={ref}
+      className="py-12 md:py-15 bg-background overflow-hidden"
+    >
       <div className="container mx-auto px-4 md:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Text Content */}
@@ -16,7 +21,9 @@ const WhyChokoLa = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <p className="section-subtitle text-transparent bg-clip-text bg-gradient-to-br from-yellow-500 to-yellow-700 mb-3">About Us</p>
+            <p className="section-subtitle text-transparent bg-clip-text bg-gradient-to-br from-yellow-500 to-yellow-700 mb-3">
+              About Us
+            </p>
             <h2 className="md:text-4xl text-3xl font-medium mb-6">
               Turn sunlight into powerful lighting. ensures brightness all night
               long
@@ -36,9 +43,12 @@ const WhyChokoLa = () => {
               highways, residential areas, commercial spaces, and public
               infrastructure projects.
             </p>
-            <a href="#" className="btn-primary-brand bg-gradient-to-br from-yellow-400 to-yellow-700 inline-block rounded-lg">
-              Learn More
-            </a>
+            <WhatsAppButton
+              message="Hello, I am interested in your products"
+              className="btn-primary-brand bg-gradient-to-br from-yellow-400 to-yellow-700 inline-block rounded-lg"
+            >
+              Order Now
+            </WhatsAppButton>
           </motion.div>
 
           {/* Image */}

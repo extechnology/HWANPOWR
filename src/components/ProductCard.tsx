@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import WhatsAppButton from "./ui/whatsappButton";
 
 interface ProductCardProps {
   image: string;
@@ -51,7 +52,11 @@ const ProductCard = ({
             whileTap={{ scale: 0.95 }}
             className="bg-white text-black px-6 py-2.5 rounded-full font-bold text-sm shadow-xl"
           >
-            Quick Order
+            <WhatsAppButton
+              message={name}
+            >
+              Order Now
+            </WhatsAppButton>
           </motion.button>
         </div>
       </div>

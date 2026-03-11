@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Mail, MapPin, Phone } from "lucide-react";
+import WhatsAppButton from "./ui/whatsappButton";
 
 const StoreLocations = () => {
   const ref = useRef(null);
@@ -64,12 +65,12 @@ const StoreLocations = () => {
               <div className="w-px bg-white/30 h-24 self-center" />
 
               <div className="content-center">
-                <a
-                  href="#"
-                  className="btn-primary-brand bg-gradient-to-br from-yellow-300 to-yellow-600 inline-block rounded-lg text-xs"
+                <WhatsAppButton
+                  message="Hello, I am interested in your products"
+                  className="btn-primary-brand bg-gradient-to-br from-yellow-400 to-yellow-700 inline-block rounded-lg"
                 >
-                  Find a store near you
-                </a>
+                  Contact Us
+                </WhatsAppButton>
               </div>
             </div>
           </div>
