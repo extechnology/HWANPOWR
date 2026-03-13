@@ -70,7 +70,7 @@ const Header = () => {
               <img
                 src="/images/hwan_logo.png"
                 alt=""
-                className="w-40 relative"
+                className="w-44 relative"
               />
             </a>
 
