@@ -55,7 +55,7 @@ const OfferingsSection = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8 }}
           >
-            <p className="text-transparent font-medium text-2xl bg-clip-text bg-gradient-to-br from-yellow-400 to-yellow-600 mb-3 tracking-widest">
+            <p className="text-transparent font-light text-2xl bg-clip-text bg-gradient-to-br from-yellow-400 to-yellow-600 mb-3 tracking-widest">
               WHY CHOOSE US
             </p>
 
@@ -90,7 +90,7 @@ const OfferingsSection = () => {
 
             <WhatsAppButton
               message="Hello, I am interested in your products"
-              className="btn-primary-brand bg-gradient-to-br from-yellow-400 to-yellow-700 inline-block rounded-lg"
+              className="btn-primary-brand font-light bg-gradient-to-br from-yellow-400 to-yellow-700 inline-block rounded-lg"
             >
               Learn More{" "}
             </WhatsAppButton>

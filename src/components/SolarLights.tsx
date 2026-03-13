@@ -169,7 +169,7 @@ const SolarLights = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <p className="section-subtitle text-transparent bg-clip-text bg-gradient-to-br from-yellow-500 to-yellow-700 mb-3">
+          <p className="section-subtitle text-2xl font-light text-transparent bg-clip-text bg-gradient-to-br from-yellow-500 to-yellow-700 mb-3">
             OUR PRODUCTS
           </p>
           <h2 className="md:text-4xl text-3xl font-medium">

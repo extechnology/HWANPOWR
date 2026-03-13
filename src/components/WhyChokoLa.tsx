@@ -21,7 +21,7 @@ const WhyChokoLa = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <p className="section-subtitle font-medium text-2xl text-transparent bg-clip-text bg-gradient-to-br from-yellow-500 to-yellow-700 mb-3">
+            <p className="section-subtitle font-light text-2xl text-transparent bg-clip-text bg-gradient-to-br from-yellow-500 to-yellow-700 mb-3">
               About Us
             </p>
             <h2 className="md:text-4xl text-3xl font-medium mb-6">
@@ -45,7 +45,7 @@ const WhyChokoLa = () => {
             </p>
             <WhatsAppButton
               message="Hello, I am interested in your products"
-              className="btn-primary-brand bg-gradient-to-br from-yellow-400 to-yellow-700 inline-block rounded-lg"
+              className="btn-primary-brand font-light bg-gradient-to-br from-yellow-400 to-yellow-700 inline-block rounded-lg"
             >
               Order Now
             </WhatsAppButton>

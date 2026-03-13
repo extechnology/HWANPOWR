@@ -31,9 +31,7 @@ const StoreLocations = () => {
               {/* Responsive layout */}
               <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 md:gap-6">
                 {/* Title */}
-                <h2 className="text-2xl md:text-3xl lg:text-4xl  font-bold text-primary-foreground">
-                  Contact Us
-                </h2>
+                <img src="/images/hwan_logo.png"  className="w-56" alt="" />
 
                 {/* Divider */}
                 <div className="hidden md:block w-px bg-white/30 h-20" />
@@ -76,7 +74,7 @@ const StoreLocations = () => {
                 <div className="w-full md:w-auto">
                   <WhatsAppButton
                     message="Hello, I am interested in your products"
-                    className="btn-primary-brand bg-gradient-to-br from-yellow-400 to-yellow-700 rounded-lg px-6 py-2 text-sm md:text-base w-full md:w-auto text-center"
+                    className="btn-primary-brand font-light bg-gradient-to-br from-yellow-400 to-yellow-700 rounded-lg px-6 py-2 text-sm  w-full md:w-auto text-center"
                   >
                     Contact Us
                   </WhatsAppButton>
