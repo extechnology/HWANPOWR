@@ -40,7 +40,7 @@ const Header = () => {
         const el = document.getElementById(section);
         if (el) observer.observe(el);
       });
-    }, 200); // wait for page to render
+    }, 200); 
 
     return () => clearTimeout(timeout);
   }, []);
@@ -73,7 +73,6 @@ const Header = () => {
                 className="w-44 relative"
               />
             </a>
-
             {/* Desktop Nav */}
             <nav className="hidden lg:flex items-center gap-10 xl:gap-12">
               {navItems.map((item) => (
@@ -91,8 +90,15 @@ const Header = () => {
                 </HashLink>
               ))}
             </nav>
-
-            <div className="flex items-center gap-3 md:gap-4"></div>
+            <div className="flex items-center gap-3 md:gap-4">
+              {/* Mobile Menu Button */}
+              <button
+                onClick={() => setMobileOpen(true)}
+                className="lg:hidden text-foreground"
+              >
+                <Menu className="w-6 h-6" />
+              </button>
+            </div>{" "}
           </div>
         </div>
       </motion.header>
@@ -117,7 +123,7 @@ const Header = () => {
             >
               <div className="p-6">
                 <div className="flex justify-between items-center mb-10">
-                  <h2 className="text-xl font-display font-bold text-foreground">
+                  <h2 className="text-xl font-bold text-foreground">
                     Menu
                   </h2>
                   <button
@@ -131,7 +137,7 @@ const Header = () => {
                   {navItems.map((item, i) => (
                     <motion.a
                       key={item.name}
-                      className="py-3 px-4 text-sm uppercase tracking-wider font-semibold text-foreground hover:text-primary hover:bg-secondary rounded-lg transition-colors font-body"
+                      className="py-3 px-2 text-sm uppercase tracking-wider font-semibold text-foreground hover:text-primary hover:bg-secondary rounded-lg transition-colors font-body"
                       initial={{ opacity: 0, x: 20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: i * 0.05 }}
