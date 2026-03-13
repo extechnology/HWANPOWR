@@ -55,7 +55,7 @@ const OfferingsSection = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8 }}
           >
-            <p className="text-transparent bg-clip-text bg-gradient-to-br from-yellow-400 to-yellow-600 mb-3 text-sm font-semibold tracking-widest">
+            <p className="text-transparent font-medium text-2xl bg-clip-text bg-gradient-to-br from-yellow-400 to-yellow-600 mb-3 tracking-widest">
               WHY CHOOSE US
             </p>
 

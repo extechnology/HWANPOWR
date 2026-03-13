@@ -31,7 +31,7 @@ const StoreLocations = () => {
               {/* Responsive layout */}
               <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 md:gap-6">
                 {/* Title */}
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-primary-foreground">
+                <h2 className="text-2xl md:text-3xl lg:text-4xl  font-bold text-primary-foreground">
                   Contact Us
                 </h2>
 

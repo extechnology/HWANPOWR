@@ -52,7 +52,7 @@ const Testimonials = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <p className="section-subtitle text-transparent bg-clip-text bg-gradient-to-br from-yellow-500 to-yellow-700 mb-3">
+          <p className="section-subtitle text-transparent font-medium text-2xl bg-clip-text bg-gradient-to-br from-yellow-500 to-yellow-700 mb-3">
             Testimonials
           </p>
           <h2 className="section-title">What Our Customers Say</h2>
