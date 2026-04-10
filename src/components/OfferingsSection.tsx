@@ -34,7 +34,7 @@ const OfferingsSection = () => {
           >
             <div className="relative rounded-2xl overflow-hidden shadow-xl">
               <img
-                src="/images/solarLight3.jpg"
+                src="/why-choose-us.webp"
                 alt="Solar lighting"
                 className="w-full h-full object-cover"
                 loading="lazy"

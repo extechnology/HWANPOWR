@@ -3,9 +3,9 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const slides = [
-  { image: "/images/hero.png", alt: "solar lights" },
-  { image: "/images/hero2.png", alt: "solar lights" },
-  { image: "/images/hero3.png", alt: "solar lights" },
+  { image: "/hero-1.webp", alt: "solar lights" },
+  { image: "/hero2.webp", alt: "solar lights" },
+  { image: "/hero2.webp", alt: "solar lights" },
 ];
 
 const HeroCarousel = () => {
@@ -91,7 +91,7 @@ const HeroCarousel = () => {
           <button
             key={i}
             onClick={() => goTo(i)}
-            className={`hero-dot bg-yellow-500 ${i === current ? "hero-dot-active" : "hero-dot-inactive"}`}
+            className={`hero-dot bg-white ${i === current ? "hero-dot-active" : "hero-dot-inactive"}`}
             aria-label={`Go to slide ${i + 1}`}
           />
         ))}

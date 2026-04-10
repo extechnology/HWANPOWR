@@ -82,8 +82,8 @@ const Header = () => {
                   to={item.link}
                   className={`nav-link text-xs xl:text-sm font-light transition-colors ${
                     activeSection === item.link.replace("#", "")
-                      ? "text-yellow-400 font-medium border-b-2 border-yellow-400"
-                      : "text-yellow-600 font-medium hover:text-yellow-400"
+                      ? "text-yellow-400 font-medium  border-yellow-400"
+                      : "text-slate-600 font-medium hover:text-yellow-400"
                   }`}
                 >
                   {item.name}

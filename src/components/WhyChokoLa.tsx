@@ -60,7 +60,7 @@ const WhyChokoLa = () => {
           >
             <div className="relative">
               <img
-                src="/images/solarPanel.png"
+                src="/about.webp"
                 alt="Handcrafted chocolate truffle"
                 className="w-full max-w-md animate-float"
                 loading="lazy"

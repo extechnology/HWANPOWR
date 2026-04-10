@@ -4,7 +4,7 @@ import ProductCard from "./ProductCard";
 
 const solarLights = [
   {
-    image: "/images/solarLight1.jpg",
+    image: "/product1.webp",
     name: "90W Solar Street Light",
     price: "₹ 2000",
     specs: {
@@ -22,7 +22,7 @@ const solarLights = [
   },
 
   {
-    image: "/images/solarLight2.jpg",
+    image: "/product2.webp",
     name: "120W Solar Street Light",
     price: "₹ 2000",
     specs: {
@@ -41,7 +41,7 @@ const solarLights = [
   },
 
   {
-    image: "/images/solarLight3.jpg",
+    image: "/product3.webp",
     name: "150W Solar Street Light",
     price: "₹ 2000",
     specs: {
@@ -60,7 +60,7 @@ const solarLights = [
   },
 
   {
-    image: "/images/solarLight4.jpg",
+    image: "/product4.webp",
     name: "300W Solar Street Light",
     price: "₹ 2000",
     specs: {
@@ -79,7 +79,7 @@ const solarLights = [
   },
 
   {
-    image: "/images/solarLight5.jpg",
+    image: "/product5.webp",
     name: "400W Solar Street Light",
     price: "₹ 2000",
     specs: {
@@ -98,7 +98,7 @@ const solarLights = [
   },
 
   {
-    image: "/images/solarLight6.jpg",
+    image: "/product6.webp",
     name: "600W Solar Street Light",
     price: "₹ 2000",
     specs: {
@@ -117,7 +117,7 @@ const solarLights = [
   },
 
   {
-    image: "/images/solarLight7.jpg",
+    image: "/product7.webp",
     name: "300W Solar Street Light (Grey)",
     price: "₹ 2000",
     specs: {
@@ -137,7 +137,7 @@ const solarLights = [
   },
 
   {
-    image: "/images/solarLight8.jpg",
+    image: "/product8.webp",
     name: "400W Solar Street Light (Grey)",
     price: "₹ 2000",
     specs: {
