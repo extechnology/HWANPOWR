@@ -12,8 +12,8 @@ const StoreLocations = () => {
       {/* Store image */}
       <div className="relative h-[380px] md:h-[340px] lg:h-[300px] overflow-hidden">
         <img
-          src="/images/contact.png"
-          alt="Choko La Boutique Store"
+          src="/contact_us.webp"
+          alt="hwampower contact us"
           className="w-full h-full object-cover"
           loading="lazy"
         />

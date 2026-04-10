@@ -10,8 +10,8 @@ const CorporateBanner = () => {
       transition={{ duration: 0.8 }}
     >
       <img
-        src="/images/corporate-banner.jpg"
-        alt="Corporate Gifting Solutions by Choko La"
+        src="/corporate-banner.webp"
+        alt="hwampower corporate banner"
         className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
         loading="lazy"
       />
