@@ -10,6 +10,14 @@ const quickLinks = [
   { name: "Contact Us", to: "#contact" },
 ];
 
+
+const policies = [
+  { name: "Privacy Policy", to: "/privacy-policy" },
+  { name: "Shipping Policy", to: "/shipping-policy" },
+  { name: "Return and Refund Policy", to: "/return-and-refund-policy" },
+  { name: "Terms and Conditions", to: "/terms-and-conditions" },
+]
+
 const Icons = [
   { link: "https://www.instagram.com/hwanpower/", icon: Instagram },
   { link: "https://www.facebook.com/hwanpower", icon: Facebook },
@@ -113,19 +121,13 @@ const Footer = () => {
               Customer Care
             </h4>
             <ul className="space-y-2">
-              {[
-                "Shipping Policy",
-                "Return Policy",
-                "Privacy Policy",
-                "Terms of Service",
-                "FAQ",
-              ].map((link) => (
-                <li key={link}>
+              {policies?.map((link) => (
+                <li key={link.name}>
                   <a
-                    href="#"
+                    href={link.to}
                     className="text-xs text-primary-foreground/50 hover:text-yellow-500 transition-colors font-body"
                   >
-                    {link}
+                    {link.name}
                   </a>
                 </li>
               ))}
