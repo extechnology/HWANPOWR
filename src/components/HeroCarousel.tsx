@@ -3,9 +3,10 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const slides = [
-  { image: "/hero-1.webp", alt: "solar lights" },
+  { image: "/hero1.webp", alt: "solar lights" },
   { image: "/hero2.webp", alt: "solar lights" },
-  { image: "/hero2.webp", alt: "solar lights" },
+  { image: "/hero3.webp", alt: "solar lights" },
+  { image: "/hero4.webp", alt: "solar lights" },
 ];
 
 const HeroCarousel = () => {
