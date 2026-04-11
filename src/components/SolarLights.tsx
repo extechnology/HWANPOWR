@@ -4,9 +4,9 @@ import ProductCard from "./ProductCard";
 
 const solarLights = [
   {
-    image: "/product1.webp",
+    image: "/product6.webp",
     name: "90W Solar Street Light",
-    price: "₹ 2000",
+    price: "₹ 2799",
     specs: {
       led: "5730 144D",
       battery: "3.2V 10Ah",
@@ -22,9 +22,9 @@ const solarLights = [
   },
 
   {
-    image: "/product2.webp",
+    image: "/product7.webp",
     name: "120W Solar Street Light",
-    price: "₹ 2000",
+    price: "₹ 2999",
     specs: {
       led: "5730 192D",
       battery: "3.2V 12Ah",
@@ -41,9 +41,9 @@ const solarLights = [
   },
 
   {
-    image: "/product3.webp",
+    image: "/product8.webp",
     name: "150W Solar Street Light",
-    price: "₹ 2000",
+    price: "₹ 3199",
     specs: {
       led: "5730 240D",
       battery: "3.2V 15Ah",
@@ -62,7 +62,7 @@ const solarLights = [
   {
     image: "/product4.webp",
     name: "300W Solar Street Light",
-    price: "₹ 2000",
+    price: "₹ 4199",
     specs: {
       led: "5730 480D",
       battery: "3.2V 15Ah",
@@ -79,47 +79,9 @@ const solarLights = [
   },
 
   {
-    image: "/product5.webp",
-    name: "400W Solar Street Light",
-    price: "₹ 2000",
-    specs: {
-      led: "5730 600D",
-      battery: "3.2V 20Ah",
-      panel: "6V 28W",
-      bodyMaterial: "Plastic ABS – 590 × 340 × 70 mm",
-      panelSize: "335 × 510 mm",
-      lightingMode:
-        "Remote control + Light control + Radar sensing + Time control",
-      lightingTime: "10 to 12 hours",
-      chargingTime: "6–8 hours",
-      sensingDistance: "8–15 meters",
-      waterproofRating: "IP67",
-    },
-  },
-
-  {
-    image: "/product6.webp",
-    name: "600W Solar Street Light",
-    price: "₹ 2000",
-    specs: {
-      led: "5730 600D",
-      battery: "3.2V 25Ah",
-      panel: "6V 35W",
-      bodyMaterial: "Plastic ABS – 675 × 340 × 70 mm",
-      panelSize: "335 × 590 mm",
-      lightingMode:
-        "Remote control + Light control + Radar sensing + Time control",
-      lightingTime: "10 to 12 hours",
-      chargingTime: "6–8 hours",
-      sensingDistance: "8–15 meters",
-      waterproofRating: "IP67",
-    },
-  },
-
-  {
-    image: "/product7.webp",
+    image: "/product1.webp",
     name: "300W Solar Street Light (Grey)",
-    price: "₹ 2000",
+    price: "₹ 3499",
     specs: {
       bodyColor: "Grey",
       led: "5730 48D",
@@ -137,9 +99,28 @@ const solarLights = [
   },
 
   {
-    image: "/product8.webp",
+    image: "/product3.webp",
+    name: "400W Solar Street Light",
+    price: "₹ 4899",
+    specs: {
+      led: "5730 600D",
+      battery: "3.2V 20Ah",
+      panel: "6V 28W",
+      bodyMaterial: "Plastic ABS – 590 × 340 × 70 mm",
+      panelSize: "335 × 510 mm",
+      lightingMode:
+        "Remote control + Light control + Radar sensing + Time control",
+      lightingTime: "10 to 12 hours",
+      chargingTime: "6–8 hours",
+      sensingDistance: "8–15 meters",
+      waterproofRating: "IP67",
+    },
+  },
+
+  {
+    image: "/product2.webp",
     name: "400W Solar Street Light (Grey)",
-    price: "₹ 2000",
+    price: "₹ 4499",
     specs: {
       bodyColor: "Grey",
       led: "5730 96D",
@@ -150,6 +131,25 @@ const solarLights = [
       lightingMode:
         "Remote control + Light control + Radar sensing + Time control",
       lightingTime: "Continuous illumination for 10 to 12 hours",
+      chargingTime: "6–8 hours",
+      sensingDistance: "8–15 meters",
+      waterproofRating: "IP67",
+    },
+  },
+
+  {
+    image: "/product5.webp",
+    name: "600W Solar Street Light",
+    price: "₹ 5999",
+    specs: {
+      led: "5730 600D",
+      battery: "3.2V 25Ah",
+      panel: "6V 35W",
+      bodyMaterial: "Plastic ABS – 675 × 340 × 70 mm",
+      panelSize: "335 × 590 mm",
+      lightingMode:
+        "Remote control + Light control + Radar sensing + Time control",
+      lightingTime: "10 to 12 hours",
       chargingTime: "6–8 hours",
       sensingDistance: "8–15 meters",
       waterproofRating: "IP67",
@@ -186,6 +186,5 @@ const SolarLights = () => {
     </section>
   );
 };
-
 
 export default SolarLights;

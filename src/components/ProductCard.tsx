@@ -27,7 +27,7 @@ const ProductCard = ({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.4, delay: index * 0.05 }}
-      className="group relative flex flex-col rounded-3xl bg-white border border-slate-200 shadow-sm hover:shadow-2xl hover:border-blue-100 transition-all duration-500 overflow-hidden"
+      className="group relative flex flex-col rounded-3xl bg-gray-100 border border-slate-200 shadow-sm hover:shadow-2xl hover:border-blue-100 transition-all duration-500 overflow-hidden"
     >
       {/* IMAGE CONTAINER */}
       <div className="relative aspect-square overflow-hidden bg-slate-100">
@@ -40,7 +40,7 @@ const ProductCard = ({
 
         {/* Floating Badge (Price) */}
         <div className="absolute top-4 right-4 z-10">
-          <span className="px-3 py-1 text-sm font-bold bg-white/90 backdrop-blur-md rounded-full shadow-sm text-yellow-600">
+          <span className="px-3 py-1 text-sm font-bold bg-gray-100 backdrop-blur-md rounded-full shadow-sm text-yellow-600">
             {price}
           </span>
         </div>
