@@ -29,19 +29,19 @@ const WhyChokoLa = () => {
               long
             </h2>
             <p className="text-muted-foreground leading-relaxed text-base md:text-md mb-8 font-body">
-              Hwanpower is a trusted manufacturer and distributor of advanced
-              solar street lighting solutions, committed to delivering reliable
-              and energy-efficient lighting systems. The company offers a wide
-              range of solar panel-mounted street lights with power capacities
-              ranging from 90W to 400W, designed to meet diverse outdoor
-              lighting needs. Hwanpower products are engineered with
-              high-performance solar panels, ensuring fast charging capability
-              and long power backup for uninterrupted illumination. With a
-              strong focus on quality, durability, and sustainable technology,
-              Hwanpower aims to support modern infrastructure with eco-friendly
-              lighting solutions. Its innovative products are ideal for streets,
-              highways, residential areas, commercial spaces, and public
-              infrastructure projects.
+              Hwanpower is a growing company engaged in the supply of solar
+              streetlights , electrical products and other related electrical
+              items. Our company is committed to delivering reliable,
+              energy-efficient, and high-quality products that meet modern
+              market requirements. With a strong focus on performance,
+              durability, and customer satisfaction, Hwanpower aims to provide
+              dependable solutions suitable for residential, commercial, and
+              infrastructure applications. By adopting advanced technology and
+              maintaining quality standards, Hwanpower strives to support
+              sustainable development through innovative and practical
+              electrical solutions. Our company continuously works towards
+              building trust and long-term relationships with customers by
+              ensuring consistent product quality and professional service.
             </p>
             <WhatsAppButton
               message="Hello, I am interested in your products"
