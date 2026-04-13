@@ -6,7 +6,7 @@ interface WhatsAppButtonProps {
   children?: React.ReactNode;
 }
 
-const PHONE_NUMBER = "919207889933"; 
+const PHONE_NUMBER = "919207889933";
 
 const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({
   message = "",

@@ -75,7 +75,6 @@ const OfferingsSection = () => {
             <div className="flex flex-wrap gap-3 mb-8">
               {[
                 "Solar Lights",
-                "Solar Panels",
                 "Street Lights",
                 "Outdoor Lighting",
               ].map((tag) => (

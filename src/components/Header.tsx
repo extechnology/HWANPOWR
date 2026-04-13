@@ -67,11 +67,7 @@ const Header = () => {
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
             <a href="/" className="flex-shrink-0">
-              <img
-                src="/images/hwan_logo.png"
-                alt=""
-                className="w-44 relative"
-              />
+              <img src="/hwan_logo.png" alt="" className="w-20 " />
             </a>
             {/* Desktop Nav */}
             <nav className="hidden lg:flex items-center gap-10 xl:gap-12">
@@ -123,9 +119,7 @@ const Header = () => {
             >
               <div className="p-6">
                 <div className="flex justify-between items-center mb-10">
-                  <h2 className="text-xl font-bold text-foreground">
-                    Menu
-                  </h2>
+                  <h2 className="text-xl font-bold text-foreground">Menu</h2>
                   <button
                     onClick={() => setMobileOpen(false)}
                     className="text-foreground"

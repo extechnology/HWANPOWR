@@ -28,16 +28,19 @@ const WhyChokoLa = () => {
               Turn sunlight into powerful lighting. ensures brightness all night
               long
             </h2>
-            <p className="text-muted-foreground leading-relaxed text-base md:text-md mb-8 font-body">
+            <p className="text-muted-foreground leading-relaxed text-justify text-base md:text-md mb-4 font-body">
               Hwanpower is a growing company engaged in the supply of solar
               streetlights , electrical products and other related electrical
               items. Our company is committed to delivering reliable,
               energy-efficient, and high-quality products that meet modern
               market requirements. With a strong focus on performance,
-              durability, and customer satisfaction, Hwanpower aims to provide
-              dependable solutions suitable for residential, commercial, and
-              infrastructure applications. By adopting advanced technology and
-              maintaining quality standards, Hwanpower strives to support
+              durability, and customer satisfaction,
+            </p>
+            <p className="text-muted-foreground leading-relaxed text-justify text-base md:text-md mb-8 font-body">
+              Hwanpower aims to
+              provide dependable solutions suitable for residential, commercial,
+              and infrastructure applications. By adopting advanced technology
+              and maintaining quality standards, Hwanpower strives to support
               sustainable development through innovative and practical
               electrical solutions. Our company continuously works towards
               building trust and long-term relationships with customers by
