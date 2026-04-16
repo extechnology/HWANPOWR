@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import { SiPinterest, SiX } from "react-icons/si";
 import { HashLink } from "react-router-hash-link";
+import { Link } from "react-router-dom";
 
 const quickLinks = [
   { name: "Home", to: "#home" },
@@ -111,12 +112,12 @@ const Footer = () => {
             <ul className="space-y-3 text-sm text-gray-400">
               {policies.map((link) => (
                 <li key={link.name}>
-                  <a
-                    href={link.to}
+                  <Link
+                    to={link.to}
                     className="hover:text-yellow-400 transition-all duration-200 hover:translate-x-1 inline-block"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
