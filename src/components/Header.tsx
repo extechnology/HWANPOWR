@@ -129,15 +129,21 @@ const Header = () => {
                 </div>
                 <nav className="flex flex-col gap-1">
                   {navItems.map((item, i) => (
-                    <motion.a
+                    <motion.div
                       key={item.name}
-                      className="py-3 px-2 text-sm uppercase tracking-wider font-semibold text-foreground hover:text-primary hover:bg-secondary rounded-lg transition-colors font-body"
                       initial={{ opacity: 0, x: 20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: i * 0.05 }}
                     >
-                      {item.name}
-                    </motion.a>
+                      <HashLink
+                        smooth
+                        to={item.link}
+                        onClick={() => setMobileOpen(false)}
+                        className="block py-3 px-2 text-sm uppercase tracking-wider font-semibold text-foreground hover:text-primary hover:bg-secondary rounded-lg transition-colors font-body"
+                      >
+                        {item.name}
+                      </HashLink>
+                    </motion.div>
                   ))}
                 </nav>
               </div>
