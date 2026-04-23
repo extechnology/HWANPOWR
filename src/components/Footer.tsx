@@ -137,9 +137,20 @@ const Footer = () => {
 
       {/* Bottom */}
       <div className="border-t border-white/10">
-        <div className="container mx-auto px-5 md:px-10 py-6 text-center">
+        <div className="container mx-auto px-5 md:px-10 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-center">
           <p className="text-xs text-gray-500">
             © 2026 HWANPOWER. All rights reserved.
+          </p>
+          <p className="text-xs text-gray-500">
+            Powered by{" "}
+            <a
+              href="https://extechnology.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-yellow-400 hover:text-yellow-300 transition-colors"
+            >
+              EXTechnology
+            </a>
           </p>
         </div>
       </div>
